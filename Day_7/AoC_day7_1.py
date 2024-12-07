@@ -1,5 +1,6 @@
 from itertools import product
 
+<<<<<<< HEAD
 def evaluate_expression(nums, ops):
     """
     Evaluates the expression formed by combining the numbers in `nums` with the operators in `ops`.
@@ -11,6 +12,10 @@ def evaluate_expression(nums, ops):
     Returns:
         int: The result of evaluating the expression.
     """
+=======
+
+def evaluate_expression(nums, ops):
+>>>>>>> 98ff617fcb5df7ffd0791289febfeefed6593b03
     result = nums[0]
     for i in range(1, len(nums)):
         if ops[i - 1] == '+':
@@ -19,6 +24,7 @@ def evaluate_expression(nums, ops):
             result *= nums[i]
     return result
 
+<<<<<<< HEAD
 def check_equation(test_value, numbers):
     """
     Checks if there is any combination of '+' and '*' operators that can combine `numbers` to equal `test_value`.
@@ -30,12 +36,17 @@ def check_equation(test_value, numbers):
     Returns:
         bool: True if a combination of operators can produce `test_value`, otherwise False.
     """
+=======
+
+def check_equation(test_value, numbers):
+>>>>>>> 98ff617fcb5df7ffd0791289febfeefed6593b03
     operators = ['+', '*']
     for ops in product(operators, repeat=len(numbers) - 1):
         if evaluate_expression(numbers, ops) == test_value:
             return True
     return False
 
+<<<<<<< HEAD
 def read_input(filename):
     """
     Reads the input from a file and returns a list of equations.
@@ -46,15 +57,24 @@ def read_input(filename):
     Returns:
         list of str: List of equations as strings.
     """
+=======
+
+def read_input(filename):
+>>>>>>> 98ff617fcb5df7ffd0791289febfeefed6593b03
     with open(filename, 'r') as file:
         lines = file.readlines()
     return [line.strip() for line in lines]
 
+<<<<<<< HEAD
 def main():
     """
     Main function that reads the input, checks which equations can be solved,
     and calculates the total calibration result.
     """
+=======
+
+def main():
+>>>>>>> 98ff617fcb5df7ffd0791289febfeefed6593b03
     equations = read_input('input1.txt')
     total_calibration_result = 0
 
@@ -68,5 +88,11 @@ def main():
 
     print(f'Total calibration result: {total_calibration_result}')
 
+<<<<<<< HEAD
 if __name__ == "__main__":
     main()
+=======
+
+if __name__ == "__main__":
+    main()
+>>>>>>> 98ff617fcb5df7ffd0791289febfeefed6593b03
